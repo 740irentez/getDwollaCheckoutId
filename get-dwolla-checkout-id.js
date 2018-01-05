@@ -47,8 +47,8 @@ module.exports = function getCheckoutId(context, callback) {
       'client_secret' : client_secret,
       'allowFundingSources' : true,
       'allowGuestCheckout' : true,
-      'redirect' : "https://wt-4be0c38760dbec5e388b02b801f4a631-0.run.webtask.io/hello",
-      'callback' : "https://wt-4be0c38760dbec5e388b02b801f4a631-0.run.webtask.io/hello",
+      'redirect' : "https://wt-4be0c38760dbec5e388b02b801f4a631-0.run.webtask.io/dwollaReceipt",
+      'callback' : "https://wt-4be0c38760dbec5e388b02b801f4a631-0.run.webtask.io/dwollaReceipt",
       'purchaseOrder' : {
         'destinationId' : destinationId,
         'total' : total,
