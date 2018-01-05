@@ -51,7 +51,7 @@ module.exports = function getCheckoutId(context, callback) {
       'callback' : "https://wt-4be0c38760dbec5e388b02b801f4a631-0.run.webtask.io/hello",
       'purchaseOrder' : {
         'destinationId' : destinationId,
-        'total' : total,
+        'total' : 2207,
         'notes' : ''
       }
     }
