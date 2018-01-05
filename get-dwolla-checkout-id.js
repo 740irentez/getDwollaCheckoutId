@@ -25,7 +25,7 @@ module.exports = function getCheckoutId(context, callback) {
     client_secret = 'i1yZrjd3KT1Qjrd9FqeM9kT6UvwPCx0SbIV9vC6owCqrZCOLcq';
   } else { //sandbox
     //destinationId = '8127418252';
-    destinationId = '812-741-8252';
+    //destinationId = '812-741-8252';
     //url = 'https://uat.dwolla.com/payment/request';
     url = 'https://sandbox.dwolla.com/oauth/rest/offsitegateway/checkouts';
     //url = 'https://api-sandbox.dwolla.com/payment/request';
@@ -51,7 +51,7 @@ module.exports = function getCheckoutId(context, callback) {
       'callback' : "https://wt-4be0c38760dbec5e388b02b801f4a631-0.run.webtask.io/hello",
       'purchaseOrder' : {
         'destinationId' : destinationId,
-        'total' : 2207,
+        'total' : total,
         'notes' : ''
       }
     }
