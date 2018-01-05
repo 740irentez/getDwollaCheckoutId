@@ -16,10 +16,16 @@ module.exports = function getCheckoutId(context, callback) {
   var client_secret;
   
   if (context.data.production === true) {
-    production = true;
-  } 
+    url = 'https://www.dwolla.com/oauth/rest/offsitegateway/checkouts';
+    client_id = 'NSU22hMNAGkXH2EYhzXyNs79l2shmG5xF5dqrAzJi6GyV6EmPt';
+    client_secret = 'i1yZrjd3KT1Qjrd9FqeM9kT6UvwPCx0SbIV9vC6owCqrZCOLcq';
+  } else {
+    url = 'https://sandbox.dwolla.com/oauth/rest/offsitegateway/checkouts';
+    client_id = 'ExMSSngBJDkF9sp4Wjlu1OL4uPnR2Q7eMNHdFfQIriGYNmhS8p';
+    client_secret = '3xelP0cXIxjOSezm0GTEarExukwk6oSaH5kT6xaITOb0AsGfv3';
+  }
   
-  if (production === true) {
+/*  if (production === true) {
     url = 'https://www.dwolla.com/oauth/rest/offsitegateway/checkouts';
     client_id = 'NSU22hMNAGkXH2EYhzXyNs79l2shmG5xF5dqrAzJi6GyV6EmPt';
     client_secret = 'i1yZrjd3KT1Qjrd9FqeM9kT6UvwPCx0SbIV9vC6owCqrZCOLcq';
@@ -28,7 +34,7 @@ module.exports = function getCheckoutId(context, callback) {
     client_id = 'ExMSSngBJDkF9sp4Wjlu1OL4uPnR2Q7eMNHdFfQIriGYNmhS8p';
     client_secret = '3xelP0cXIxjOSezm0GTEarExukwk6oSaH5kT6xaITOb0AsGfv3';
   }
-
+*/
   console.log(url);
   
   var payload = {
