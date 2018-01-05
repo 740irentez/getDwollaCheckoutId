@@ -9,13 +9,14 @@ module.exports = function getCheckoutId(context, callback) {
 //return function (context, callback) {
   console.log('Sending new message to bot... ');
 
-  var destinationId;
+  var destinationId = context.data.destinationId;
+  var total = context.data.total;
   var url;
   var client_id;
   var client_secret;
   
   if (production === true) {
-    destinationId = '8128397947';
+    //destinationId = '8128397947';
     //destinationId = '812-839-7947';
     //destinationId = 8128397947;
     
@@ -50,7 +51,7 @@ module.exports = function getCheckoutId(context, callback) {
       'callback' : "https://wt-4be0c38760dbec5e388b02b801f4a631-0.run.webtask.io/hello",
       'purchaseOrder' : {
         'destinationId' : destinationId,
-        'total' : 20.44,
+        'total' : total,
         'notes' : ''
       }
     }
