@@ -15,7 +15,9 @@ module.exports = function getCheckoutId(context, callback) {
   var client_id;
   var client_secret;
   
-  
+  if (context.data.production === true) {
+    production = true;
+  } 
   
   if (production === true) {
     //destinationId = '8128397947';
