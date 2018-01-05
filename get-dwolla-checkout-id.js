@@ -51,8 +51,6 @@ module.exports = function getCheckoutId(context, callback) {
       'client_secret' : client_secret,
       'allowFundingSources' : true,
       'allowGuestCheckout' : true,
-//      'redirect' : "https://wt-4be0c38760dbec5e388b02b801f4a631-0.run.webtask.io/dwollaReceipt",
-//      'callback' : "https://wt-4be0c38760dbec5e388b02b801f4a631-0.run.webtask.io/dwollaReceipt",
       'redirect' : 'https://wt-4be0c38760dbec5e388b02b801f4a631-0.run.webtask.io/dwolla-receipt-2',
       'callback' : 'https://wt-4be0c38760dbec5e388b02b801f4a631-0.run.webtask.io/dwolla-receipt-2',
       'purchaseOrder' : {
@@ -79,10 +77,7 @@ module.exports = function getCheckoutId(context, callback) {
     if (error) console.log('ERROR: ', error);
     else  console.log('SUCCESS');
     
-    //res.writeHead(200, { 'Content-Type': 'text/html '});
-    //res.end('Hello ABBIE TTITIE');
     callback(error, body);
-    console.log(callback.toString());
   });
   
   
