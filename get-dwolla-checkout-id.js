@@ -38,6 +38,7 @@ module.exports = function getCheckoutId(context, callback) {
     client_secret = '3xelP0cXIxjOSezm0GTEarExukwk6oSaH5kT6xaITOb0AsGfv3';
   }
 
+  console.log(url);
   
   var payload = {
     url: url,
